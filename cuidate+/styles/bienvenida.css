@@ -1,0 +1,236 @@
+/* BIENVENIDA */
+
+.bienvenida{
+    padding-top:120px;
+    padding-bottom:80px;
+    background:transparent;
+    color:white;
+}
+
+/* CONTENEDOR */
+
+.bienvenida-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+/* TEXTO */
+
+.bienvenida-texto h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.bienvenida-texto span{
+    color:#56CCF2;
+}
+
+.bienvenida-texto p{
+    font-size:18px;
+    line-height:1.6;
+    color:#e3e3e3;
+    margin-bottom:35px;
+}
+
+/* BUSCADOR */
+
+.buscador{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.45);
+    border-radius:50px;
+
+    padding:18px 24px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    transition:all 0.25s ease;
+}
+
+.buscador:focus-within{
+    border-color:#FFFFFF;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.08);
+}
+
+.buscador i{
+    color:#56CCF2;
+    font-size:18px;
+}
+
+.buscador-input{
+    position:relative;
+    width:100%;
+}
+
+.buscador-input input{
+    width:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#FFFFFF;
+    font-size:16px;
+    padding:10px 0 2px 0;
+}
+
+.buscador-input input::placeholder{
+    color:transparent;
+}
+
+.buscador-input label{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    color:#DCEBFF;
+    font-size:16px;
+    pointer-events:none;
+    transition:all 0.25s ease;
+}
+
+/* cuando hace click o escribe */
+.buscador-input input:focus + label,
+.buscador-input input:not(:placeholder-shown) + label{
+    top:-8px;
+    transform:none;
+    font-size:12px;
+    color:#FFFFFF;
+    font-weight:500;
+}
+
+/* CARDS */
+
+.bienvenida-cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* CARD INDIVIDUAL */
+
+.card-info{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.card-info.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-info:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,0.12);
+}
+
+.card-info h3{
+    margin-bottom:10px;
+}
+
+.card-info p{
+    color:#e6e6e6;
+    font-size:15px;
+}
+
+@media (max-width: 850px) {
+    .bienvenida-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    .bienvenida-texto h1 {
+        font-size: 36px; 
+    }
+    .buscador {
+        justify-content: center;
+    }
+}
+
+/* sugerencia en el buscador */
+
+/* SUGERENCIAS DEL BUSCADOR */
+
+.buscador-sugerencias{
+    position:absolute;
+    top:calc(100% + 12px);
+    left:0;
+    width:100%;
+    background:rgba(14, 39, 64, 0.96);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:18px;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 16px 35px rgba(0,0,0,0.22);
+    overflow:hidden;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:all 0.22s ease;
+    z-index:50;
+}
+
+.buscador-sugerencias.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.sugerencia-item{
+    padding:14px 18px;
+    color:#EAF4FF;
+    font-size:15px;
+    cursor:pointer;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    transition:background 0.2s ease;
+}
+
+.sugerencia-item:last-child{
+    border-bottom:none;
+}
+
+.sugerencia-item:hover{
+    background:rgba(86,204,242,0.12);
+}
+
+.sugerencia-item strong{
+    color:#56CCF2;
+}
+
+.sugerencia-empty{
+    padding:14px 18px;
+    color:#DCEBFF;
+    font-size:15px;
+    line-height:1.5;
+}
+
+.sugerencia-ia-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 14px;
+    border:none;
+    border-radius:12px;
+    background:#2F80ED;
+    color:#FFFFFF;
+    font-weight:700;
+    cursor:pointer;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sugerencia-ia-btn:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(47,128,237,0.28);
+}
