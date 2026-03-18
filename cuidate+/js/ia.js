@@ -45,7 +45,7 @@ const API_KEY = 'sk-proj-bMcp3bF6kspNpnETCfJfSqRxZDl7C0cEB5AbRdNXIyzDz-sSGrOVPuE
   
   8. Mantén un tono profesional y humano, como si un médico estuviera explicando la situación a su paciente.
   
-  9. Siempre incluye un recordatorio de seguridad médica indicando que la información es orientativa y no sustituye una consulta con un profesional de la salud.
+  9. Siempre incluye un recordatorio de seguridad médica indicando que la información es orientativa y no sustituye una consulta con un profesional de la salud.`
   
   let chatOpen = false;
   let isTyping = false;
