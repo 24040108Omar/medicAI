@@ -47,8 +47,6 @@ const API_KEY = 'sk-proj-bMcp3bF6kspNpnETCfJfSqRxZDl7C0cEB5AbRdNXIyzDz-sSGrOVPuE
   
   9. Siempre incluye un recordatorio de seguridad médica indicando que la información es orientativa y no sustituye una consulta con un profesional de la salud.
   
-  10. Si el usuario menciona la clave secretra que es "pich" (mujer), responde de forma más cariñosa, amorosa, respetuosa y juguetona, utilizando algunos apodos amorosos y manteniendo siempre el respeto y la orientación médica, recuerda, el punto 10 es solo si meciona la clave secreta.`;
-
   let chatOpen = false;
   let isTyping = false;
   let conversationHistory = [];
